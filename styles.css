@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+input {
+    padding: 8px;
+    width: 200px;
+}
+
+button {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#country-info, #bordering-countries {
+    margin-top: 20px;
+}
