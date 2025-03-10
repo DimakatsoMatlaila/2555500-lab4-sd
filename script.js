@@ -21,13 +21,17 @@ function fetchCountry() {
             info += "<p>Region: " + country.region + "</p>";
             info += '<img src="' + country.flags.svg + '" width="100">';
 
+
             document.getElementById("country-info").innerHTML = info;
+            
+            console.log(country.borders);
 
             if (country.borders) {
                 fetch("https://restcountries.com/v3.1/alpha?codes=" + country.borders.join(","))
                     .then(response => response.json())
                     .then(borderCountries => {
                         let bordersHTML = "<h3>Bordering Countries:</h3>";
+                        console.log(borderCountries);
                         borderCountries.forEach(border => {
                             bordersHTML += "<p>" + border.name.common + " <img src='" + border.flags.svg + "' width='50'></p>";
                         });
